@@ -355,8 +355,9 @@ nav .mobile .inner ul .download {
 }
 
 .footer {
-  display: block;
+  display: flex;
   height: 20vh;
+  width: 100%;
   margin: 0;
   background-color: var(--secondary-color);
   color: white;
@@ -370,6 +371,11 @@ nav .mobile .inner ul .download {
   position: relative;
 }
 .footer .footer-container h1 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 15rem;
   font-family: "Fraunces Bold Italic";
   font-size: 2.5rem;
 }
@@ -380,4 +386,39 @@ nav .mobile .inner ul .download {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.footer .footer-container .sos {
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  left: 75%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer .footer-container .sos .sos-logo {
+  width: 2.5rem;
+}
+@media (max-width: 560px) {
+  .footer .footer-container h1 {
+    margin-left: 10% !important;
+    font-size: 1.5rem;
+    width: 10rem;
+  }
+  .footer .footer-container .sos {
+    position: absolute;
+  }
+  .footer .footer-container .sos .sos-logo {
+    width: 1.5rem;
+  }
+  .footer .footer-container .vertical-line {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 7vh;
+    border-left: solid 0.1rem white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }/*# sourceMappingURL=style.css.map */

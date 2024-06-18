@@ -3,13 +3,13 @@ const second = document.querySelector('.second');
 const third = document.querySelector('.third');
 
 first.addEventListener('click', () => {
-    console.log('aaaaa');
+    window.location.href = '../products/'
 });
 
 second.addEventListener('click', () => {
-    console.log('bbbbb');
+    window.location.href = '../products/'
 });
 
 third.addEventListener('click', () => {
-    console.log('ccccc');
+    window.location.href = '../products/'
 });
