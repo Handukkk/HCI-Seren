@@ -257,7 +257,7 @@ nav{
 
     .carousel-container {
         margin-top: 1.3rem;
-        background-color: red;
+        // background-color: red;
         width: 80%;
         height: 90%;
         position: relative;
@@ -279,6 +279,7 @@ nav{
             height: 100%;
             align-items: center;
             margin: 0 auto;
+            border-radius: 10px;
         }
 
         .first-item {
@@ -315,7 +316,7 @@ nav{
     justify-content: center;
     text-align: center;
     background-color: white;
-    border-radius: 15px;
+    border-radius: 10px;
 
     .title {
         color: black;
@@ -350,7 +351,7 @@ nav{
             width: 20rem !important;
             height: 45vh;
             margin: 1rem;
-            border-radius: 15px;
+            border-radius: 10px;
             background-size: cover;
             background-position: center;
             position: relative;
@@ -616,6 +617,77 @@ nav{
                 height: 100%;
                 object-fit: cover;
                 filter: brightness(70%);
+            }
+        }
+    }
+}
+
+.aboutus {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    border-radius: 10px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .history {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        img {
+            width: 25rem;
+        }
+
+        .history-text {
+            padding: 1rem;
+            text-align: justify;
+
+            h1 {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .mnp {
+        display: flex;
+        align-items: center;
+        img {
+            width: 25rem;
+        }
+
+        .mnp-text {
+            padding: 1rem;
+            text-align: justify;
+
+            h1 {
+                text-align: right;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .history {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            img {
+                width: 20rem;
+            }
+        }
+        .mnp {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            img {
+                width: 20rem;
             }
         }
     }
