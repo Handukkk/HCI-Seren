@@ -328,6 +328,26 @@ nav{
             text-shadow: -0.5rem 0.5rem 0.5rem black;
             // padding-right: 3rem;
         }
+
+        @media (max-width: 640px) {
+            img {
+                width: 13rem;
+            }
+    
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 462px) {
+            img {
+                width: 10rem;
+            }
+    
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
     }
 
 }

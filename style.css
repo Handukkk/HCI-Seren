@@ -291,6 +291,22 @@ nav .mobile .inner ul .download {
   font-size: 2rem;
   text-shadow: -0.5rem 0.5rem 0.5rem black;
 }
+@media (max-width: 640px) {
+  .carousel .carousel-container img {
+    width: 13rem;
+  }
+  .carousel .carousel-container h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 462px) {
+  .carousel .carousel-container img {
+    width: 10rem;
+  }
+  .carousel .carousel-container h1 {
+    font-size: 1.5rem;
+  }
+}
 
 .recipes {
   width: 80%;
