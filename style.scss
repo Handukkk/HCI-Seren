@@ -396,13 +396,11 @@ nav{
 }
 
 .haikei {
-    // z-index: 9999;
     aspect-ratio: 960/100;
     background-image: url("./assets/images/waves.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // background-color: #ffffff;
     gap: 0;
     margin: 0;
     padding: 0;
@@ -411,8 +409,9 @@ nav{
 }
 
 .footer {
-    display: block;
+    display: flex;
     height: 20vh;
+    width: 100%;
     margin: 0;
     background-color: var(--secondary-color);
 
@@ -427,6 +426,11 @@ nav{
         position: relative;
 
         h1 {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 15rem;
             font-family: 'Fraunces Bold Italic';
             font-size: 2.5rem;
         }
