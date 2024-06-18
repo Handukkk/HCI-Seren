@@ -1,0 +1,444 @@
+:root {
+    --primary-color: rgb(171, 152, 115);
+    --secondary-color: rgb(144, 120, 72);
+    --white-color: white;
+    --black-color: black;
+    --bg-color: #001220;
+}
+
+@font-face {
+    font-family: 'Fraunces Bold Italic';
+    src: url(/assets/fonts/Fraunces_9pt-BoldItalic.ttf);
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: "Literata", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    position: relative;
+    user-select: none;
+    // min-height: 100vh;
+    height: fit-content;
+    justify-content: center;
+    gap: 0;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+button{
+    cursor: pointer;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 100 !important;
+    overflow: hidden;
+
+    border-top: 5px solid var(--primary-color);
+
+    .scrolled{
+        background-color: var(--white-color) !important;
+    }
+
+    .desktop{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem 0 2rem;
+        background-color: var(--white-color);
+        padding-bottom: 1rem;
+
+
+        .logo-wrapper{
+            font-family: "Fraunces Bold Italic";
+            font-size: 1.5rem;
+
+            color: var(--primary-color);
+        }
+
+        ul{
+            display: flex;
+            gap: 1rem;
+
+            a{
+                padding: .1rem .5rem;
+                font-size: 1.3rem;
+                color: var(--primary-color);
+            }
+
+            a:hover{
+                color: var(--secondary-color);
+            }
+        }
+    }
+
+    .mobile{
+        position: relative;
+        z-index: 100;
+        display: none;
+
+        .outer{
+            border-top: 5px solid var(--primary-color);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 2rem 0.5rem 2rem;
+            background-color: var(--white-color);
+
+            .logo-wrapper{
+                font-family: "Fraunces Bold Italic";
+                font-size: 1.5rem;
+
+                color: var(--primary-color);
+
+            }
+
+            svg{
+                padding: 1rem;
+                cursor: pointer;
+                width: 4rem;
+                height: 4rem;
+                color: var(--black-color);
+            }
+        }
+
+        .middle{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba($color: #000000, $alpha: .6);
+            display: none;
+        }
+
+        .inner{
+            transition: all .2s linear;
+            position: fixed;
+            top: 0;
+            right: -100%;
+
+            background-color: var(--white-color);
+            height: 100vh;
+            width: 40%;
+
+            padding-bottom: 1rem;
+
+
+            ul{
+                padding-top: 5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                
+                a{
+                    padding: .1rem .5rem;
+                    font-size: 1.3rem;
+                    color: var(--primary-color);
+                    transition: all .1s linear;
+
+                    
+                    &:hover{
+                        background-color: var(--secondary-color);
+                        color: var(--white-color);
+                    }
+
+                    li{
+                        padding: 1rem;
+                        transition: all .1s linear;
+
+                    }
+                }
+
+                .download{
+                    background-color: var(--secondary-color);
+                }
+            }
+        }
+    }
+
+        //small navbar
+        @media (max-width: 768px){
+            .desktop{
+                display: none;
+            }
+
+            .mobile{
+                display: block;
+            }
+        }
+}
+
+#picked{
+    color: var(--secondary-color) !important;
+    border-bottom: 0.2rem solid var(--secondary-color);
+}
+
+#picked-mobile{
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('assets/images/kellogg.jpg');
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    border-bottom-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    // box-shadow: 0 0 2rem 0 black;
+    border-bottom: var(--primary-color) solid 0.8rem;
+
+
+    .hero-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+        color: var(--white-color);
+        width: fit-content;
+        text-align: center;
+        justify-items: center;
+
+        h1 {
+            font-family: 'Fraunces Bold Italic';
+            font-size: 5rem;
+            
+            @media (max-width: 768px) {
+                font-size: 3rem;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            width: 500px;
+            padding-top: 0.5rem;
+
+            @media (max-width: 768px) {
+                font-size: 0.8rem;
+                width: fit-content;
+            }
+        }
+    }
+}
+
+.carousel {
+    display: block;
+    width: 100%;
+    height: 60vh;
+
+    .carousel-container {
+        margin-top: 1.3rem;
+        background-color: red;
+        width: 80%;
+        height: 90%;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        aspect-ratio: 20/6;
+        overflow: hidden;
+
+        .item {
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            position: absolute;
+            justify-content: center;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .first-item {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/images/froot-loops-bg.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        img {
+            width: 18rem;
+            object-fit: contain;
+            filter: drop-shadow(-1.3rem 1rem 1rem black);
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-shadow: -0.5rem 0.5rem 0.5rem black;
+            // padding-right: 3rem;
+        }
+    }
+
+}
+
+.recipes {
+    width: 100%;
+    margin-top: 3rem;
+    color: white;
+    display: block;
+    margin-bottom: 3rem;
+    justify-content: center;
+    text-align: center;
+
+    .title {
+        color: white;
+        margin-bottom: 5vh;
+    }
+
+    .recipes-container {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+
+        h1 {
+            width: 90%;
+            margin: auto;
+        }
+
+        .first {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/banana-butter.jpg');
+        }
+
+        .second {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/peanut-butter.jpg');
+            background-position: 40% !important;
+        }
+
+        .third {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/french-toast.jpg');
+        }
+
+        .first, .second, .third {
+            width: 20rem !important;
+            height: 45vh;
+            margin: 1rem;
+            border-radius: 15px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            transition: 0.3s ease-in-out;
+
+            .type {
+                padding: 3vh;
+            }
+
+            .timer, .serving {
+                position: absolute;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: auto;
+
+                svg {
+                    padding: 0;
+                    margin: 0;
+                    height: auto;
+                    width: 3rem;
+                }
+
+                p {
+                    padding: 5px;
+                    width: 100px;
+                }
+
+            }
+
+            .timer {
+                bottom: 9.5vh;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+            .serving {
+                bottom: 2.5vh;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+        }
+
+        .first:hover, .second:hover, .third:hover {
+            cursor: pointer;
+            transform: translate(0, -1.1rem);
+        }
+    }
+}
+
+.haikei {
+    // z-index: 9999;
+    aspect-ratio: 960/100;
+    background-image: url("./assets/images/waves.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-color: #ffffff;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.footer {
+    display: block;
+    height: 20vh;
+    margin: 0;
+    background-color: var(--secondary-color);
+
+    color: white;
+    
+    .footer-container {
+        display: block;
+        margin: 0 auto;
+        width: 30rem;
+        height: 100%;
+        align-content: center;
+        position: relative;
+
+        h1 {
+            font-family: 'Fraunces Bold Italic';
+            font-size: 2.5rem;
+        }
+
+        .vertical-line {
+            position: absolute;
+            height: 10vh;
+            border-left: solid 0.1rem white;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+}
