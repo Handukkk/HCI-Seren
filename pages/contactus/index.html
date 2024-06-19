@@ -80,14 +80,29 @@
 
     <div class="contactus">
         <h1>Contact Us</h1>
-        <form>
-            <input class="small" type="text" placeholder="First Name">
-            <input class="small" type="text" placeholder="Second Name">
-            <input class="small" type="email" placeholder="Email Address">
+        <form id="contactForm">
+            <div class="input-group">
+                <input class="small" type="text" id="firstName" placeholder="First Name">
+                <small class="error none" id="firstNameError">First name is required.</small>
+            </div>
+            <div class="input-group">
+                <input class="small" type="text" id="secondName" placeholder="Last Name">
+                <small class="error none" id="secondNameError">Last name is required.</small>
+            </div>
+            <div class="input-group">
+                <input class="small" type="email" id="emailAddress" placeholder="Email Address">
+                <small class="error none" id="emailError">Please enter a valid email address.</small>
+            </div>
+            <div class="input-group">
+                <input class="small" type="text" id="phoneNumber" placeholder="Phone Number">
+                <small class="error none" id="phoneError">Please enter a valid phone number.</small>
+            </div>
             <textarea placeholder="Message" rows="5" cols="50"></textarea>
             <input class="submit" type="submit">
         </form>
+        <script src="../../scripts/validation.js"></script>
     </div>
+    
     
     <div class="haikei"></div>
     <div class="footer">
@@ -101,5 +116,7 @@
             </div>
         </div>
     </div>
+
+    <script src="../../scripts/validation.js"></script>
 </body>
 </html>

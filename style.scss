@@ -789,6 +789,7 @@ nav{
         .small {
             border: none;
             outline: none;
+            width: 100%;
             padding: 1rem;
             color: var(--secondary-color);
             border-bottom: solid 0.1rem var(--primary-color);
@@ -828,4 +829,16 @@ nav{
             width: 85%;
         }
     }
+}
+
+.error {
+    color: red;
+}
+
+.none {
+    display: none;
+}
+
+.visible {
+    display: block;
 }
