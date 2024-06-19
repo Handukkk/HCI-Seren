@@ -626,6 +626,7 @@ nav{
     
         .name,
         .name2,
+        .name3,
         .timer,
         .serving {
             position: relative;
@@ -651,8 +652,13 @@ nav{
         }
     
         .name2 {
-            margin-bottom: 40%;
+            margin-bottom: 10%;
             font-size: 2rem;
+        }
+
+        .name3 {
+            font-size: 0.8rem;
+            margin-bottom: 1.8rem;
         }
     
         .img-wrapper {

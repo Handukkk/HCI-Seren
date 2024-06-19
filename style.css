@@ -549,6 +549,7 @@ nav .mobile .inner ul .download {
 }
 .recipe .card .name,
 .recipe .card .name2,
+.recipe .card .name3,
 .recipe .card .timer,
 .recipe .card .serving {
   position: relative;
@@ -570,8 +571,12 @@ nav .mobile .inner ul .download {
   margin-bottom: 2rem;
 }
 .recipe .card .name2 {
-  margin-bottom: 40%;
+  margin-bottom: 10%;
   font-size: 2rem;
+}
+.recipe .card .name3 {
+  font-size: 0.8rem;
+  margin-bottom: 1.8rem;
 }
 .recipe .card .img-wrapper {
   position: absolute;
